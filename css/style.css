@@ -232,51 +232,9 @@ header,
     pointer-events: none;
 }
 
-/*
- * ── ALTERNATIVA SOLO CSS (comentada) ──────────────────────────────────────
- * Se probó animation-timeline: scroll() para ocultar la navbar sin JS.
- * LIMITACIÓN: CSS no puede detectar si el usuario sube o baja; solo vincula
- * la animación a la posición del scroll. La barra reaparece al acercarse al
- * inicio de la página, NO al hacer un pequeño scroll hacia arriba en mitad
- * del documento. Por eso se reemplazó por js/navbar-scroll.js.
- *
-@supports (animation-timeline: scroll()) {
-    .header-bar {
-        animation: navbar-scroll-hide linear both;
-        animation-timeline: scroll(root block);
-        animation-range: 40px 140px;
-    }
-
-    @keyframes navbar-scroll-hide {
-        0% {
-            transform: translateY(0);
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
-        }
-
-        100% {
-            transform: translateY(calc(-100% - 14px));
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-        }
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    @supports (animation-timeline: scroll()) {
-        .header-bar {
-            animation: none;
-            transform: none;
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
-        }
-    }
-}
- * ── Fin alternativa CSS ───────────────────────────────────────────────────
- */
+/* ========================================
+   HEADER INNER
+   ======================================== */
 
 @media (prefers-reduced-motion: reduce) {
     .header-bar {
