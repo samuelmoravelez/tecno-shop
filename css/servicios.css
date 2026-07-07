@@ -1,0 +1,56 @@
+/* ========================================
+   SERVICIOS PAGE - SPECIFIC STYLES
+   ======================================== */
+
+/* ========================================
+   VALUE PROPOSITIONS (SHARED WITH INDEX)
+   ======================================== */
+.value-props-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-lg);
+}
+
+.value-card {
+    padding: var(--space-lg);
+    border-radius: var(--radius-2xl);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition:
+        transform var(--transition-smooth),
+        border-color var(--transition-smooth),
+        box-shadow var(--transition-smooth);
+}
+
+.value-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(8, 178, 255, 0.35);
+    box-shadow: 0 12px 32px rgba(8, 178, 255, 0.1);
+}
+
+.value-icon {
+    font-size: var(--font-size-7xl);
+    margin-bottom: var(--space-sm);
+    display: block;
+}
+
+.value-card h3 {
+    margin: 0 0 var(--space-sm);
+    font-size: var(--font-size-2xl);
+    color: #fff;
+}
+
+.value-card p {
+    margin: 0;
+    font-size: var(--font-size-base);
+    color: var(--muted);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - SERVICIOS PAGE
+   ======================================== */
+@media (max-width: 900px) {
+    .value-props-grid {
+        gap: var(--space-md);
+    }
+}

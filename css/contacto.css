@@ -1,0 +1,26 @@
+/* ========================================
+   CONTACTO PAGE - SPECIFIC STYLES
+   ======================================== */
+
+/* ========================================
+   CONTACT MAP
+   ======================================== */
+.contact-map iframe {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    min-height: 280px;
+    border: 0;
+    border-radius: var(--radius-2xl);
+    margin-top: var(--space-lg);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - CONTACTO PAGE
+   ======================================== */
+@media (max-width: 900px) {
+    .contact-map iframe {
+        min-height: 220px;
+    }
+}

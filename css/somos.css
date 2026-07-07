@@ -1,0 +1,29 @@
+/* ========================================
+   SOMOS PAGE - SPECIFIC STYLES
+   ======================================== */
+
+/* ========================================
+   ABOUT PAGE CONTENT
+   ======================================== */
+#quienes-somos h2 {
+    margin-top: 0;
+    margin-bottom: var(--space-lg);
+}
+
+#quienes-somos p {
+    margin-bottom: var(--space-lg);
+    line-height: 1.8;
+}
+
+#quienes-somos p:last-child {
+    margin-bottom: 0;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - SOMOS PAGE
+   ======================================== */
+@media (max-width: 900px) {
+    #quienes-somos p {
+        font-size: var(--font-size-base);
+    }
+}

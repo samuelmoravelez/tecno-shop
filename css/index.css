@@ -1,0 +1,370 @@
+/* ========================================
+   INDEX PAGE - SPECIFIC STYLES
+   ======================================== */
+
+/* ========================================
+   BANNER HERO SECTION
+   ======================================== */
+.banner {
+    margin-bottom: var(--space-2xl);
+    padding: var(--space-3xl) var(--space-2xl);
+    border-radius: var(--space-2xl);
+    background: linear-gradient(
+        135deg,
+        rgba(8, 178, 255, 0.14),
+        rgba(93, 214, 255, 0.06)
+    );
+    border: 1px solid rgba(8, 178, 255, 0.2);
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.banner h1 {
+    margin: 0 0 var(--space-sm);
+    font-size: clamp(var(--font-size-6xl), 4vw, var(--font-size-8xl));
+    letter-spacing: -0.04em;
+    color: #fff;
+}
+
+.banner-subtitle {
+    margin: 0 0 var(--space-lg);
+    font-size: clamp(var(--font-size-lg), 2vw, var(--font-size-3xl));
+    color: var(--muted);
+}
+
+.banner-inner p {
+    margin: 0 0 var(--space-lg);
+    color: var(--muted);
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ========================================
+   VALUE PROPOSITIONS
+   ======================================== */
+.value-props-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-lg);
+}
+
+.value-card {
+    padding: var(--space-lg);
+    border-radius: var(--radius-2xl);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition:
+        transform var(--transition-smooth),
+        border-color var(--transition-smooth),
+        box-shadow var(--transition-smooth);
+}
+
+.value-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(8, 178, 255, 0.35);
+    box-shadow: 0 12px 32px rgba(8, 178, 255, 0.1);
+}
+
+.value-icon {
+    font-size: var(--font-size-7xl);
+    margin-bottom: var(--space-sm);
+    display: block;
+}
+
+.value-card h3 {
+    margin: 0 0 var(--space-sm);
+    font-size: var(--font-size-2xl);
+    color: #fff;
+}
+
+.value-card p {
+    margin: 0;
+    font-size: var(--font-size-base);
+    color: var(--muted);
+}
+
+/* ========================================
+   PRODUCTS GRID
+   ======================================== */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-lg);
+    margin-top: 0;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-lg);
+}
+
+.product {
+    position: relative;
+    padding: var(--space-md);
+    overflow: hidden;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.08),
+        rgba(255, 255, 255, 0.02)
+    );
+    border-radius: var(--radius-3xl);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: var(--shadow-lg);
+    transition:
+        transform var(--transition-smooth),
+        box-shadow var(--transition-smooth),
+        border-color var(--transition-smooth);
+}
+
+.product:hover,
+.product:focus-within {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    border-color: rgba(8, 178, 255, 0.25);
+}
+
+.product img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    display: block;
+    transition: transform var(--transition-smooth);
+}
+
+.product:hover img {
+    transform: scale(1.02);
+}
+
+.offer-badge,
+.new-badge {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    z-index: 1;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.offer-badge {
+    background: linear-gradient(135deg, #f97316, #fb923c);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.35);
+}
+
+.new-badge {
+    background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+    color: #020617;
+    box-shadow: 0 4px 12px rgba(8, 178, 255, 0.3);
+}
+
+.price-old {
+    margin: var(--space-xs) 0 0;
+    font-size: var(--font-size-sm);
+    color: var(--muted);
+    text-decoration: line-through;
+    opacity: 0.75;
+}
+
+.product-placeholder {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-8xl);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px dashed rgba(255, 255, 255, 0.12);
+}
+
+.product-name {
+    margin: var(--space-sm) 0 var(--space-xs);
+    font-size: var(--font-size-xl);
+    color: #fff;
+}
+
+.product-desc {
+    margin: 0 0 var(--space-sm);
+    font-size: var(--font-size-sm);
+    color: var(--muted);
+}
+
+.product .price {
+    font-weight: 800;
+    font-size: var(--font-size-xl);
+    color: var(--accent-soft);
+    margin: var(--space-sm) 0 var(--space-sm);
+}
+
+.product .btn-buy {
+    width: 100%;
+    min-height: var(--touch-min);
+}
+
+.section-cta {
+    margin-top: var(--space-lg);
+    text-align: center;
+}
+
+/* ========================================
+   FAQ
+   ======================================== */
+.faq-list {
+    display: grid;
+    gap: var(--space-sm);
+    max-width: 720px;
+}
+
+.faq-item {
+    border-radius: var(--radius-xl);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+    transition:
+        border-color var(--transition-smooth),
+        background var(--transition-smooth);
+}
+
+.faq-item[open] {
+    border-color: rgba(8, 178, 255, 0.3);
+    background: rgba(8, 178, 255, 0.05);
+}
+
+.faq-item summary {
+    padding: var(--space-md) var(--space-lg);
+    min-height: var(--touch-min);
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    list-style: none;
+    transition: color var(--transition-fast);
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    margin-left: auto;
+    padding-left: var(--space-md);
+    font-size: var(--font-size-3xl);
+    font-weight: 400;
+    color: var(--accent-soft);
+    transition: transform var(--transition-smooth);
+}
+
+.faq-item[open] summary::after {
+    content: "−";
+}
+
+.faq-item summary:hover,
+.faq-item summary:focus-visible {
+    color: var(--accent-soft);
+    outline: none;
+}
+
+.faq-item p {
+    margin: 0;
+    padding: 0 var(--space-lg) var(--space-lg);
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: var(--font-size-base);
+}
+
+/* ========================================
+   TESTIMONIALS
+   ======================================== */
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+.testimonial {
+    padding: var(--space-lg);
+    border-radius: var(--radius-xl);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: rgba(226, 232, 240, 0.9);
+    font-style: italic;
+    transition:
+        transform var(--transition-smooth),
+        border-color var(--transition-smooth);
+}
+
+.testimonial:hover {
+    transform: translateY(-2px);
+    border-color: rgba(8, 178, 255, 0.2);
+}
+
+.testimonial cite {
+    display: block;
+    margin-top: var(--space-sm);
+    font-style: normal;
+    font-weight: 700;
+    color: var(--text);
+}
+
+/* ========================================
+   CONTACT TEASER
+   ======================================== */
+.contact-teaser {
+    text-align: center;
+}
+
+.contact-teaser p {
+    max-width: 480px;
+    margin: 0 auto var(--space-lg);
+}
+
+/* ========================================
+   COMPARISON TABLE
+   ======================================== */
+.comparison-table table {
+    min-width: 480px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - INDEX PAGE
+   ======================================== */
+@media (max-width: 900px) {
+    .products-grid,
+    .offers-grid,
+    .value-props-grid,
+    .testimonials {
+        gap: var(--space-md);
+    }
+
+    .product img,
+    .product-placeholder {
+        height: 160px;
+    }
+
+    .banner {
+        padding: var(--space-xl) var(--space-md);
+    }
+
+    .comparison-table table {
+        min-width: 420px;
+    }
+
+    .faq-item summary {
+        padding: var(--space-md);
+        font-size: var(--font-size-base);
+    }
+
+    .faq-item p {
+        padding: 0 var(--space-md) var(--space-md);
+    }
+}
